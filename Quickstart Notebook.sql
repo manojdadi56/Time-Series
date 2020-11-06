@@ -38,7 +38,7 @@ OPTIONS (path "/databricks-datasets/Rdatasets/data-001/csv/ggplot2/diamonds.csv"
 
 -- COMMAND ----------
 
-SELECT * from diamonds
+
 
 -- COMMAND ----------
 
