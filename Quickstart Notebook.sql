@@ -89,8 +89,7 @@ SELECT color, avg(price) AS price FROM diamonds GROUP BY color ORDER BY color
 
 -- COMMAND ----------
 
--- MAGIC %python
--- MAGIC diamonds = spark.read.csv("/databricks-datasets/Rdatasets/data-001/csv/ggplot2/diamonds.csv", header="true", inferSchema="true")
+
 
 -- COMMAND ----------
 
