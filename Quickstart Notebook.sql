@@ -99,7 +99,3 @@ SELECT color, avg(price) AS price FROM diamonds GROUP BY color ORDER BY color
 
 -- COMMAND ----------
 
--- MAGIC %python
--- MAGIC from pyspark.sql.functions import avg
--- MAGIC 
--- MAGIC display(diamonds.select("color","price").groupBy("color").agg(avg("price")).sort("color"))
