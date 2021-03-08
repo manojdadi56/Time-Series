@@ -1,0 +1,54 @@
+ML Notebook libraries: -
+
+Python libraries: 
+
+Dev + QA + Prod clusters - Install into folder /Shared/Libraries/Dev_QA_Prod/ in databricks and then install from there onto cluster
+rpy2==3.2.6
+holidays==0.9.12
+lightgbm==2.3.1
+pmdarima==1.5.3
+stldecompose==0.0.5
+statsmodels==0.10.2     # default=0.11.0
+croston==0.1.2.2
+arch==4.7.0
+xgboost==1.1.0
+tsfresh==0.14.1
+pycausalimpact==0.0.15
+nbconvert==5.6.1
+pyculiarity==0.0.7
+gbart==0.2.1
+tensorflow==2.3.1
+keras==2.4.3
+mlflow==1.9.1
+fbprophet==0.5.0
+
+Dev only - Install into folder /Shared/Libraries/Dev_Only/ in databricks and then install from there onto cluster 
+line_profiler==3.0.2
+python-pptx == 0.6.18
+xlsxwriter==1.2.8
+
+
+R_libraries: Required in Dev+QA+Prod environments
+Open a python notebook in databricks
+
+1. # Delete folder if exists
+dbutils.fs.rm('dbfs:/FileStore/R_lib/lib', recurse = True)
+
+2. # Make dbfs folder for R libraries
+dbutils.fs.mkdirs('dbfs:/FileStore/R_lib/lib')
+
+3. Install normally in the web interface from cran: forecast, bnlearn, bsts 
+using snapshot: https://cran.microsoft.com/snapshot/2019-11-01
+
+4. # Check libraries:
+%r
+list.files("/databricks/spark/R/lib/")
+
+5. Move the installed libraries into the created folder
+%sh cp /databricks/spark/R/lib/ /dbfs/FileStore/R_lib --recursive
+
+6. Mark the installed R libraries for uninstallation from web interface and restart cluster
+
+7. # Check libraries:
+%r
+list.files("/dbfs/FileStore/R_lib/lib/")
