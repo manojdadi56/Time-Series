@@ -28,7 +28,6 @@ RUN  /databricks/conda/envs/dcs-minimal/bin/pip install keras==2.4.3
 
 RUN  /databricks/conda/envs/dcs-minimal/bin/pip install mlflow==1.9.1
 RUN  /databricks/conda/envs/dcs-minimal/bin/pip install pystan==2.19.1.1
-RUN  /databricks/conda/envs/dcs-minimal/bin/pip install fbprophet==0.5.0
 
 
 
