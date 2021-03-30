@@ -61,3 +61,5 @@ RUN R -e "install.packages(c('hwriterPlus'), repos='https://mran.revolutionanaly
  
  
 RUN  /databricks/conda/envs/dcs-minimal/bin/pip install rpy2==3.2.6
+
+RUN  /databricks/conda/envs/dcs-minimal/bin/pip install fbprophet==0.5.0
