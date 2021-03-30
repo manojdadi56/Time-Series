@@ -8,27 +8,27 @@ RUN apt-get update \
 # Warning: you still need to start the ssh process with `sudo service ssh start`
 RUN useradd --create-home --shell /bin/bash --groups sudo ubuntu
 
-RUN /bin/sh -c /databricks/conda/envs/dcs-minimal/bin/pip install holidays==0.9.12
-RUN /bin/sh -c /databricks/conda/envs/dcs-minimal/bin/pip install lightgbm==2.3.1
-RUN /bin/sh -c /databricks/conda/envs/dcs-minimal/bin/pip install pmdarima==1.5.3
-RUN /bin/sh -c /databricks/conda/envs/dcs-minimal/bin/pip install stldecompose==0.0.5
-RUN /bin/sh -c /databricks/conda/envs/dcs-minimal/bin/pip install statsmodels==0.10.2
+RUN  /databricks/conda/envs/dcs-minimal/bin/pip install holidays==0.9.12
+RUN  /databricks/conda/envs/dcs-minimal/bin/pip install lightgbm==2.3.1
+RUN  /databricks/conda/envs/dcs-minimal/bin/pip install pmdarima==1.5.3
+RUN  /databricks/conda/envs/dcs-minimal/bin/pip install stldecompose==0.0.5
+RUN  /databricks/conda/envs/dcs-minimal/bin/pip install statsmodels==0.10.2
 
-RUN /bin/sh -c /databricks/conda/envs/dcs-minimal/bin/pip install croston==0.1.2.2
-RUN /bin/sh -c /databricks/conda/envs/dcs-minimal/bin/pip install arch==4.7.0
-RUN /bin/sh -c /databricks/conda/envs/dcs-minimal/bin/pip install xgboost==1.1.0
-RUN /bin/sh -c /databricks/conda/envs/dcs-minimal/bin/pip install tsfresh==0.14.1
-RUN /bin/sh -c /databricks/conda/envs/dcs-minimal/bin/pip install pycausalimpact==0.0.15
+RUN /databricks/conda/envs/dcs-minimal/bin/pip install croston==0.1.2.2
+RUN  /databricks/conda/envs/dcs-minimal/bin/pip install arch==4.7.0
+RUN  /databricks/conda/envs/dcs-minimal/bin/pip install xgboost==1.1.0
+RUN  /databricks/conda/envs/dcs-minimal/bin/pip install tsfresh==0.14.1
+RUN  /databricks/conda/envs/dcs-minimal/bin/pip install pycausalimpact==0.0.15
 
-RUN /bin/sh -c /databricks/conda/envs/dcs-minimal/bin/pip install nbconvert==5.6.1
-RUN /bin/sh -c /databricks/conda/envs/dcs-minimal/bin/pip install pyculiarity==0.0.7
-RUN /bin/sh -c /databricks/conda/envs/dcs-minimal/bin/pip install gbart==0.2.1
-RUN /bin/sh -c /databricks/conda/envs/dcs-minimal/bin/pip install tensorflow==2.3.1
-RUN /bin/sh -c /databricks/conda/envs/dcs-minimal/bin/pip install keras==2.4.3
+RUN  /databricks/conda/envs/dcs-minimal/bin/pip install nbconvert==5.6.1
+RUN  /databricks/conda/envs/dcs-minimal/bin/pip install pyculiarity==0.0.7
+RUN  /databricks/conda/envs/dcs-minimal/bin/pip install gbart==0.2.1
+RUN  /databricks/conda/envs/dcs-minimal/bin/pip install tensorflow==2.3.1
+RUN  /databricks/conda/envs/dcs-minimal/bin/pip install keras==2.4.3
 
-RUN /bin/sh -c /databricks/conda/envs/dcs-minimal/bin/pip install mlflow==1.9.1
-RUN /bin/sh -c /databricks/conda/envs/dcs-minimal/bin/pip install pystan==2.19.1.1
-RUN /bin/sh -c /databricks/conda/envs/dcs-minimal/bin/pip install fbprophet==0.5.0
+RUN  /databricks/conda/envs/dcs-minimal/bin/pip install mlflow==1.9.1
+RUN  /databricks/conda/envs/dcs-minimal/bin/pip install pystan==2.19.1.1
+RUN  /databricks/conda/envs/dcs-minimal/bin/pip install fbprophet==0.5.0
 
 
 
@@ -60,4 +60,4 @@ RUN R -e "install.packages(c('hwriterPlus'), repos='https://mran.revolutionanaly
  
  
  
-RUN /bin/sh -c /databricks/conda/envs/dcs-minimal/bin/pip install rpy2==3.2.6
+RUN  /databricks/conda/envs/dcs-minimal/bin/pip install rpy2==3.2.6
